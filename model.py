@@ -22,8 +22,7 @@ VS = len(valid_batch.classes)//BS
 print(SPE,VS)
 
 
-# img,labels= next(train_batch)
-# print(img.shape)
+
 
 model = Sequential([
     Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(24,24,1)),
