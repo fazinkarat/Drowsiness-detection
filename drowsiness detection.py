@@ -52,11 +52,11 @@ while(True):
         r_eye = np.expand_dims(r_eye,axis=0)
         rpred = model.predict_classes(r_eye)
         if(rpred[0]==1):
-            lbl='Open' \
+            lbl='Open' 
         if(rpred[0]==0):
             lbl='Closed'
         break
-install
+
     for (x,y,w,h) in left_eye:
         l_eye=frame[y:y+h,x:x+w]
         count=count+1
