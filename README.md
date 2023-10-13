@@ -53,5 +53,5 @@ CNN and TensorFlow is used to detect drowsiness by extracting features from imag
 14. The video frame with annotations is displayed in a window.
 
 15. The loop continues until the user presses the 'q' key, at which point the video capture is released, and all OpenCV windows are destroyed.
-
+16. For running the program perfectly ensure you have a system that has good specs to handle the tf load.
 This code combines face and eye detection with a pre-trained neural network to determine whether a person's eyes are open or closed, allowing it to detect drowsiness based on eye state. If you have any specific questions about how parts of this code work or need further explanations, feel free to ask!
