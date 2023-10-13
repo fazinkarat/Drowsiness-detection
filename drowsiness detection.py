@@ -66,13 +66,13 @@ while(True):
         l_eye=l_eye.reshape(24,24,-1)
         l_eye = np.expand_dims(l_eye,axis=0)
         lpred = np.argmax(model.predict(l_eye), axis=-1)
-        if( rpred.all()==1):
+        if(rpred.all() == 1):
             lbl='Open'   
-        if( lpred.all()==0):
+        if(lpred.all() == 0):
             lbl='Closed'
         break
 
-    if np.logical_and((rpred.all()) == 0, (lpred.all()) == 0):
+    if np.logical_and(rpred.all() == 0, lpred.all() == 0):
         score=score+1
         cv2.putText(frame,"Closed",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
     # if(rpred[0]==1 or lpred[0]==1):
@@ -84,7 +84,7 @@ while(True):
     if(score<0):
         score=0   
     cv2.putText(frame,'Score:'+str(score),(100,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
-    if(score>15):
+    if(score>30):
         #person is feeling sleepy so we beep the alarm
         cv2.imwrite(os.path.join(path,'image.jpg'),frame)
         try:
