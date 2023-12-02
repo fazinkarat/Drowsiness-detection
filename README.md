@@ -1,4 +1,4 @@
-# Drowsiness-detection
+# Integrated Drowsiness-detection System with SMS Alert
 CNN and TensorFlow is used to detect drowsiness by extracting features from images of people's eyes. The CNN model is trained on a dataset of images of drowsy and non-drowsy people. Once the model is trained, it can be used to detect drowsiness in real time by analyzing images of people's eyes
 
 1. Import necessary libraries and modules:
